@@ -1,4 +1,4 @@
-# This is the repo with meta data about all of varnish
+# This is the repo with some org-wide issue templates and some and some text on the front page
 
 ## Issue templates
 
