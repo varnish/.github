@@ -1,0 +1,52 @@
+name: Story-based Request
+description: Describe a feature or fix from a user-driven perspective
+labels: [story, enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 📖 Tell us a story...
+        Use the story format to describe your need. This helps us understand context, motivation, and intended outcomes.
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User Story
+      description: |
+        Example: "As a site reliability engineer, I want to automatically rotate logs older than 7 days, so that disk usage stays under control."
+      placeholder: |
+        As a [persona],
+        I want [some goal],
+        So that [some reason].
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: |
+        Define what success looks like. What should be true when this is done?
+      placeholder: |
+        - Logs older than 7 days are deleted automatically
+        - Log rotation respects configured retention period
+        - A warning is logged if disk usage > 90%
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context or Notes
+      description: Background info, related issues, or decisions already made.
+      placeholder: Optional
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: collaboration
+    attributes:
+      label: Collaboration
+      options:
+        - label: I’d like to work on this myself (or with support)
+        - label: I’m fine with someone else picking this up

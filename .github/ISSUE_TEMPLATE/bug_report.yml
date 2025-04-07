@@ -1,0 +1,60 @@
+name: Bug Report
+description: Report something that isn't working as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Thanks for reporting a bug!
+
+  - type: input
+    id: affected_area
+    attributes:
+      label: Affected Component
+      description: e.g., `varnishd`, `cli`, `log parser`, etc.
+      placeholder: varnishd
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe what went wrong
+      placeholder: Be as detailed as possible
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro_steps
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Provide minimal steps so someone else can trigger the issue.
+      placeholder: |
+        1. Start server
+        2. Run curl to /cache/test
+        3. See error
+
+  - type: input
+    id: version
+    attributes:
+      label: Software version
+      placeholder: 7.3.0 / git hash / commit ID
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Low (cosmetic or minor)
+        - Medium (affects usage but has a workaround)
+        - High (blocks functionality)
+        - Critical (security or full outage)
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+
