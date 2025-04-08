@@ -50,11 +50,4 @@ body:
         - High (blocks functionality)
         - Critical (security or full outage)
 
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
 
